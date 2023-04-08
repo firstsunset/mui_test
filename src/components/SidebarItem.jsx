@@ -1,21 +1,21 @@
 import React from 'react';
-import styled from 'styled-components';
 
-const StyledItem = styled.div`
-    height: 40px;
-    background-color: white;
-    border-bottom: 1px solid grey;
-    display: flex;
-    justify-content: space-between;
-    padding: 5px 20px;
-`
-const SedebarItem = ({text, imageUrl}) => (
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+
+const SidebarItem = ({text, image}) => (
     (
-        <StyledItem >
-            <h3>{text}</h3>
-            <img src={imageUrl} alt='Icon' />
-        </StyledItem>
+        <ListItem disablePadding>
+            <ListItemButton>
+                <ListItemText primary={text} />
+                <ListItemIcon>
+                {image}
+                </ListItemIcon>
+            </ListItemButton>
+        </ListItem>
     )
 );
     
-export default SedebarItem;
+export default SidebarItem;
